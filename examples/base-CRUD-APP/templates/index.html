@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset = "UTF-8" />
+      <link href = "/css/app_style.css" rel = "stylesheet"/>
+      <title>Autosalon</title>
+   </head>
+   <body>   		
+   			<div class="title_part">		
+				<h1>Seznam zákazníků</h1>
+			</div>
+			<div class="table_part">			  			    	
+	      		<div class="m_table">
+	      			<div class="table_head">	      				
+	      					<span class="table_head_column" style="width: 120px;">First Name</span>
+	      					<span class="table_head_column" style="width: 100px;">Last Name</span>
+	      					<span class="table_head_column" style="width: 140px;">Email</span>
+	      					<span class="table_head_column" style="width: 30px;">Edit</span>	
+	      					<span class="table_head_column" style="width: 30px;">Del</span>
+	      			</div>
+	      			<div class="table_body">
+	      				<div th:each="customer : ${listCustomers}" th:object="${customer}">
+	      					<span class="table_body_column" style="width: 120px;" th:text="*{firstName}"></span>
+	      					<span class="table_body_column" style="width: 100px;" th:text="*{lastName}"></span>
+	      					<span class="table_body_column" style="width: 140px;" th:text="*{email}"></span>
+	      					<span class="table_body_column" style="width: 30px; text-align: center;">
+	      						<a th:href="@{/updateForm/{id}(id=*{id})}" >
+	      							<img src="/img/edit-icon16.png" alt="Edit Customer" style="height: 12px;">
+	      						</a>
+	      					</span>
+	      					<span class="table_body_column" style="width: 30px; text-align: center;">
+      							<a th:href="@{/deleteCustomer/{idd}(idd=*{id})}" >
+      								<img src="/img/delete.png" alt="Delete Customer" style="height: 12px;">
+      							</a>
+      						</span>				
+	      				</div>
+	      			</div>
+	      		</div>
+      		</div>
+      		<div class="buttons_part">
+      			<a th:href="@{/newCustomerForm}" class="add_button_href">Nový zákazník</a>
+      		</div>      		
+      	
+   </body>
+</html>
