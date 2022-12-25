@@ -1,0 +1,147 @@
+body {
+	text-align: center;
+	background: #E8E8E8;
+}
+
+
+
+.title_part {
+	display: inline-block;
+	width: 100%;
+	text-align: center;	
+    font-size: 16px;
+    text-decoration: underline;
+    color: #ff6600;
+}
+
+.table_part {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+.buttons_part {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	/*border: 2px solid white;*/
+}
+
+.m_table {		
+	display: inline-block;	  	
+	border: 2px solid #989898;
+}
+
+/* Head of the table */
+.table_head {
+    background: #085;
+    font-size: 0px;     /* Hack becouse of inline block - remove unespected space betveen child spans - the font-size is setup in child span, here must be zero*/   
+    border-bottom: 2px solid #989898;
+}
+
+.table_head span {
+    display: inline-block;    
+    border-right: 1px solid #989898;
+    font-size: 18px;    
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.table_head span:last-child {
+    border-right: 0px;
+}
+
+/* Body of the table */
+
+/* Background Color of odd row */
+.table_body div:nth-child(odd) {    
+    background: #0066cc;
+}
+
+/* Background Color of even row */
+.table_body div:nth-child(even) {    
+    background: #009933;
+}
+
+.table_body div {
+    font-size: 0px;  /* unwanted space between inline blocks hack */
+}
+
+.table_body div span {
+    display: inline-block;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: left;
+    border-right: 1px solid #989898;    
+    padding-bottom: 2px;
+    padding-top: 2px;
+    overflow: hidden;    
+}
+
+.table_body div span:last-child {
+    border-right: 0px;
+}
+
+
+/*left right padding must be same for head and body part of table*/
+.table_head span, .table_body div span {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+/***********************/
+/*  Href button style  */
+/***********************/
+
+.buttons_part {
+	margin-top: 35px;
+}
+
+.buttons_part a:link, .buttons_part a:visited {
+  /*background-color: #009933;*/
+  background-color: #99ff99;
+  font-size: 16px;  
+  font-weight: normal;
+  color: #ff4d4d; /*#ff6600;*/
+  border: 1px solid #66ff66;
+  border-radius: 5px;
+  padding: 7px 18px;
+  text-align: center;
+  text-decoration: none;
+  opacity: 80%;
+  display: inline-block;
+}
+
+.buttons_part a:hover, .buttons_part a:active {
+  background-color: #66ff66;
+  color: #ff8080; /*#ff6600;*/
+  font-weight: normal;
+}
+
+/***************************
+ *	Add new customer form  *
+ *						   *
+ ***************************/
+
+ .container {
+    background: #0059b3;
+    border: 1px solid #A0A0A0;
+    display: inline-block;    
+    padding: 0 20px 10px 20px;    
+}
+
+.form-title {
+    font-size: 20px;
+    color: #ff9980;
+    margin-bottom: 38px;
+}
+
+.customer-form input {     
+    display: block;
+    margin-bottom: 5px;
+}
+
+.customer-form button {     
+    margin-top: 10px;
+}
